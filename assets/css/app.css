@@ -347,6 +347,11 @@ figure a:hover {
   font-weight: bold;
 }
 
+.content h2 img {
+  width: 29px;
+  background: #f72210;
+}
+
 .in-mag-bot article:last-of-type a {
   display: block;
 }
