@@ -317,32 +317,190 @@ figure a:hover {
   text-decoration: none;
 }
 
-div[class^="in-mag"] .content article img {
+[class^="in-mag"] .content article img {
   width: 100%;
 }
 
-div[class^="in-mag"] .content span {
+[class^="in-mag"] .content span {
   padding: 0.25rem 0.5rem;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 16px;
   font-weight: bold;
 }
 
-div[class^="in-mag"] .content span:first-of-type {
+[class^="in-mag"] .content span:first-of-type {
   background: #f72210;
   color: #fff;
 }
 
-div[class^="in-mag"] .content span:last-of-type a {
+[class^="in-mag"] .content span:last-of-type a {
   color: #f72210;
 }
 
-div[class^="in-mag"] span > a:hover {
+[class^="in-mag"] span > a:hover {
   text-decoration: none;
 }
 
-.in-mag-top .content h2 {
+.content h2 {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 19px;
   font-weight: bold;
+}
+
+.in-mag-bot article:last-of-type a {
+  display: block;
+}
+
+.in-mag-bot article:last-of-type span {
+  bottom: 0;
+  left: 0;
+}
+
+.slideshow figcaption i {
+  font-size: 28px;
+}
+
+.slideshow figcaption span {
+  font-size: 14px;
+  position: relative;
+  left: -1.3em;
+  top: -0.55em;
+}
+
+.other-sections h2 a {
+  color: #f72210;
+}
+
+.other-sections h2 a:hover {
+  text-decoration: none;
+  color: #f72210;
+}
+
+.other-sections h3 {
+  font-size: 18px;
+}
+
+.int-promo h3 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  color: #000;
+  font-size: 20px;
+}
+
+main .int-promo h4 {
+  color: #f72210;
+}
+
+.int-promo .subscribe > div {
+  background: #f4f5f6;
+}
+
+.int-promo p {
+  font-size: 15px;
+}
+
+.int-promo a:hover {
+  text-decoration: none;
+}
+
+.int-promo span {
+  background-color: #f72210;
+  color: #fff;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.int-promo span:hover {
+  background: #de1f0e;
+}
+
+.newsletter figure {
+  width: 100%;
+  height: 160px;
+}
+
+.newsletter figure img {
+  width: 100%;
+}
+
+footer .brand svg {
+  width: 236px;
+  height: 36px;
+  fill: #f72210;
+}
+
+footer .brand span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+
+footer .brand ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .brand li {
+  display: inline-block;
+}
+
+footer .brand li a {
+  font-size: 26px;
+  margin-right: 0.5rem;
+  color: #666;
+}
+
+footer .brand li:nth-child(1) a:hover {
+  color: #3b5998;
+}
+
+footer .brand li:nth-child(2) a:hover {
+  color: #00acee;
+}
+
+footer .brand li:nth-child(3) a:hover {
+  color: #3f729b;
+}
+
+footer .brand li:nth-child(4) a:hover {
+  color: #34526f;
+}
+
+footer .brand li:nth-child(5) a:hover {
+  color: #0072b1;
+}
+
+footer .brand li:nth-child(4) a i {
+  transform: scale(0.8);
+}
+
+footer .footer-links {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+footer .footer-links span {
+  font-weight: bold;
+  padding-top: 0.25rem;
+}
+
+footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-links li {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+}
+
+footer .footer-links a {
+  color: #666;
+}
+
+footer .footer-links a:hover {
+  color: #000;
+  text-decoration: none;
 }
