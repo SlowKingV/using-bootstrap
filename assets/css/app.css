@@ -13,6 +13,21 @@ body {
 
 /* -----------------------------------------------NAVBAR------------------------------------------------------ */
 
+#topbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+#topbar > div {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease-out;
+}
+
 .navbar {
   background: #f72210;
   fill: #fff;
@@ -66,11 +81,11 @@ body {
   background: #fff;
 }
 
-header > label i:nth-child(1) {
+.navbar > label i:nth-child(1) {
   display: initial;
 }
 
-header > label i:nth-child(2) {
+.navbar > label i:nth-child(2) {
   display: none;
 }
 
@@ -82,6 +97,11 @@ header > label i:nth-child(2) {
   display: initial;
 }
 
+#nav-open:checked ~ .navbar-nav {
+  right: 0;
+  opacity: 1;
+}
+
 .navbar-nav {
   top: 50px;
   right: -220px;
@@ -91,11 +111,6 @@ header > label i:nth-child(2) {
   transition: all 0.3s ease-out;
   z-index: 100;
   background: #fff;
-}
-
-#nav-open:checked ~ .navbar-nav {
-  right: 0;
-  opacity: 1;
 }
 
 .navbar-nav form input {
@@ -148,6 +163,102 @@ header > label i:nth-child(2) {
   color: #f72210;
 }
 
+header .brand {
+  background: #f72210;
+  padding: 20px 10px 15px;
+  color: #fff;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+header .brand > div {
+  width: 33%;
+}
+
+header svg {
+  width: 396px;
+  height: 60px;
+  fill: #fff;
+}
+
+header .subscribe {
+  font-size: 18px;
+}
+
+header .subscribe a:hover {
+  text-decoration: none;
+}
+
+header .subscribe span:last-child {
+  color: #f72210;
+}
+
+header .nav {
+  padding-right: 160px;
+}
+
+header .nav > div:not(.fill) {
+  box-sizing: content-box;
+  border-right: 1px solid #c2d4d7;
+  text-align: center;
+  flex: 1 0 auto;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  z-index: 5;
+}
+
+header .nav a {
+  color: #000;
+}
+
+header .nav a:hover {
+  color: #f72210;
+  text-decoration: none;
+}
+
+header .searchfield {
+  width: 100%;
+  padding-left: 0.25rem;
+}
+
+header #searchbox {
+  flex: 0 0 auto;
+  width: 60px;
+  border: none;
+  padding: 4px;
+  left: 0;
+  transition: flex 0.2s ease-out;
+  z-index: 10;
+}
+
+header #searchbox::placeholder {
+  color: #666;
+}
+
+header #searchbox:focus {
+  flex: 1 0 auto;
+}
+
+header .searchfield i {
+  display: inline-block;
+  width: 94px;
+}
+
+header .searchfield i::before {
+  margin-left: 0.25rem;
+}
+
+header .nav .fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 78px;
+  height: 13px;
+  border-top: 13px solid #f72210;
+  border-left: 13px solid #fff;
+  z-index: 10;
+}
+
 /* -----------------------------------------------MAIN CONTENT------------------------------------------------------ */
 
 main {
@@ -191,6 +302,7 @@ main h3 a:hover {
   background: rgba(255, 255, 255, 0.8);
   bottom: 0;
   left: 0;
+  text-align: center;
 }
 
 figure a {
@@ -199,6 +311,7 @@ figure a {
   font-size: 17px;
   font-weight: bold;
   color: #f72210;
+  width: 100%;
 }
 
 figure a:hover {
@@ -208,7 +321,6 @@ figure a:hover {
 
 .more-stories figure {
   width: 135px;
-  height: 90px;
   overflow: hidden;
 }
 
@@ -282,7 +394,6 @@ figure a:hover {
 }
 
 .latest-news figure {
-  height: 90px;
   width: 135px;
   display: flex;
   align-items: center;
@@ -494,18 +605,150 @@ footer .footer-links span {
 footer .footer-links ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 footer .footer-links li {
   display: inline-block;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.5rem 0.25rem 0;
 }
 
 footer .footer-links a {
   color: #666;
+  padding-right: 0.5rem;
+  box-sizing: content-box;
 }
 
 footer .footer-links a:hover {
   color: #000;
   text-decoration: none;
+}
+
+@media (min-width: 576px) {
+  .more-stories figure {
+    width: 258px;
+  }
+
+  .latest-news figure {
+    width: 258px;
+  }
+}
+
+@media (min-width: 768px) {
+  .more-stories figure {
+    width: 135px;
+  }
+
+  .latest-news figure {
+    width: 135px;
+  }
+
+  main .bottom-col {
+    max-width: 330px;
+    margin: auto;
+  }
+
+  .culture article {
+    width: 50%;
+  }
+
+  .ad-mag {
+    width: 25%;
+    padding: 1rem;
+  }
+
+  .content h2,
+  .content h3 {
+    font-size: 20px;
+  }
+
+  .in-mag-top .content {
+    width: 75%;
+  }
+
+  .in-mag-top .content article {
+    width: 33.33%;
+    padding: 1rem;
+  }
+
+  .in-mag-bot article {
+    width: 25%;
+    padding: 1rem;
+  }
+
+  .slideshow article {
+    width: 33.33%;
+  }
+
+  .other-sections section > div:first-of-type {
+    width: 66%;
+  }
+
+  .other-sections section > div:last-of-type {
+    width: 34%;
+  }
+
+  .other-sections h3 a {
+    font-size: 17px;
+  }
+
+  .int-promo .subscribe figure {
+    width: unset;
+    height: 241px;
+  }
+
+  .int-promo .subscribe img {
+    width: unset;
+    height: 100%;
+  }
+
+  .int-promo .newsletter figure {
+    width: 191px;
+    height: unset;
+  }
+
+  .int-promo .newsletter img {
+    width: unset;
+    height: 100%;
+  }
+
+  footer .footer-links li:not(:last-of-type) > a {
+    border-right: 1px solid #d9d9d9;
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    border-bottom: 1px solid #c2d4d7;
+  }
+
+  #topbar {
+    top: -50px;
+  }
+
+  #topbar a:last-of-type.active ~ div {
+    top: 50px;
+  }
+
+  main {
+    border-top: 1px solid #c2d4d7;
+    margin-top: 0;
+  }
+
+  .editors-pick h2 a {
+    font-size: 24px;
+  }
+
+  .int-promo section {
+    padding: 1rem;
+  }
+
+  .int-promo .subscribe {
+    flex: 1;
+  }
+
+  .int-promo .newsletter {
+    flex: 1;
+    max-width: 400px;
+  }
 }
