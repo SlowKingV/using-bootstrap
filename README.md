@@ -63,7 +63,7 @@ The last thing changing here is the **main** container. It will stop growing wit
 - VSCode
 
 ## Live Demo
-You can check a live version here: https://raw.githack.com/SlowKingV/using-bootstrap/homepage/index.html
+You can check a live version here: https://slowkingv.github.io/using-bootstrap/
 
 ## Author
 
