@@ -13,6 +13,16 @@ body {
 
 /* -----------------------------------------------NAVBAR------------------------------------------------------ */
 
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
 #topbar {
   width: 100%;
   position: fixed;
@@ -139,6 +149,7 @@ body {
   font-weight: bold;
   font-family: "Roboto Condensed", sans-serif;
   list-style: none;
+  overflow-y: scroll;
 }
 
 .navbar-nav a {
@@ -177,7 +188,6 @@ header .brand > div {
 header svg {
   width: 396px;
   height: 60px;
-  fill: #fff;
 }
 
 header .subscribe {
@@ -237,6 +247,7 @@ header #searchbox::placeholder {
 
 header #searchbox:focus {
   flex: 1 0 auto;
+  outline: none;
 }
 
 header .searchfield i {
@@ -543,7 +554,6 @@ main .int-promo h4 {
 footer .brand svg {
   width: 236px;
   height: 36px;
-  fill: #f72210;
 }
 
 footer .brand span {
